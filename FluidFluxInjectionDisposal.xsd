@@ -4,7 +4,7 @@
 	<xs:import namespace="http://www.opengis.net/gmlsf" schemaLocation="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd"/>
 	<xs:annotation>
 		<!-- This XSD document, including XML schema, indicates the content requested for AASG geothermal data interoperable web services for description of fluid flux injection/disposal records for wells. In the geothermal data system, fluid flux injection/disposal records are one of the observation feature services that are used as a delivery method to discover resources derived from wells. Each well record should have a unique ObservationURI.-->
-		<!--Annotated version 1.1.1. This XSD document was created on 2012-12-16 by Celia Coleman, AZGS.  This schema is based on the form data available in the AASG Web Feature Services for the FluidFluxInjection reports originating from CADOGGR and AZGS. Field Description annotations standardized 2013-08-22 by Esty Pape, AZGS.-->
+		<!--Version 1.1.2 changed date types to 'dateTime'.  Annotated version 1.1.1. This XSD document was created on 2012-12-16 by Celia Coleman, AZGS.  This schema is based on the form data available in the AASG Web Feature Services for the FluidFluxInjection reports originating from CADOGGR and AZGS. Field Description annotations standardized 2013-08-22 by Esty Pape, AZGS.-->
 		<xs:appinfo source="http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsfLevels.xsd">
 			<gmlsf:ComplianceLevel>0</gmlsf:ComplianceLevel>
 			<gmlsf:GMLProfileSchema>
@@ -121,12 +121,12 @@ http://schemas.opengis.net/gml/3.1.1/profiles/gmlsfProfile/1.0.0/gmlsf.xsd </gml
 							<xs:documentation>Information on how the original location was determined, e.g.: 1:250,000 map, gps unit, Google Earth, PLSS Conversion, Spatial Datum Conversion, e.g., NAD27 to WGS84.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="IntervalStartDateTime" type="xs:string">
+					<xs:element name="IntervalStartDateTime" type="xs:dateTime">
 						<xs:annotation>
 							<xs:documentation>Start Date for the record: date on which observation, measurement or test was made or specimen was collected. Day, month and year must be specified; Excel will display using ISO 8601 date and time (yyyy-mm-ddT:hh:mm) format. If only the year is known, enter month and day as 'Jan. 1', (or '1/1/', or '1-1-', or 'January 1,'). All dates will be converted to yyyy-mm-ddThh:mm.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
-					<xs:element name="IntervalEndDateTime" type="xs:string">
+					<xs:element name="IntervalEndDateTime" type="xs:dateTime">
 						<xs:annotation>
 							<xs:documentation>End Date for the record:(date on which observation, measurement or test was made or specimen was collected. Day, month and year must be specified; Excel will display using ISO 8601 date and time (yyyy-mm-ddT:hh:mm) format. If only the year is known, enter month and day as 'Jan. 1', (or '1/1/', or '1-1-', or 'January 1,'). All dates will be converted to yyyy-mm-ddThh:mm.</xs:documentation>
 						</xs:annotation>
